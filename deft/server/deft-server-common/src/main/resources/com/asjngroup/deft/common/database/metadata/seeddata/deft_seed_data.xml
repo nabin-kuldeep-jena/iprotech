@@ -1,0 +1,261 @@
+<SeedDataRoot defaultAction="synchronise">
+  <!-- <RefTables>
+	<RefTable entEntity="Currency" rftName="Currency" rftSiteSpecificFl="N" rftVisibleFl="Y">
+			<RefTableColumns>
+				<RefTableColumn rfcLabel="ISO Code" rfcType="string" rfcDataProperty="curIsoCd" rfcOrderNo="0" rfcVisibleFl="Y" rfcSortFl="Y" rfcMandatoryFl="Y" rfcSearchableFl="Y" rfcReadOnlyFl="N" rfcDefault="" rfcExtra1="Text" />
+				<RefTableColumn rfcLabel="Name" rfcType="string" rfcDataProperty="curName" rfcOrderNo="1" rfcVisibleFl="Y" rfcSortFl="N" rfcMandatoryFl="Y" rfcSearchableFl="Y"  rfcReadOnlyFl="N" rfcDefault="" rfcExtra1="Text" />
+				<RefTableColumn rfcLabel="Culture" rfcType="string" rfcDataProperty="curCulture" rfcOrderNo="2" rfcVisibleFl="Y" rfcSortFl="N" rfcMandatoryFl="Y" rfcSearchableFl="Y" rfcReadOnlyFl="N" rfcDefault="" rfcExtra1="Text" />
+			</RefTableColumns>
+		</RefTable>
+  </RefTables>
+  	<Currencys>
+		<Currency curName="British Pound" curIsoCd="GBP" curCulture="en-GB" curSymbol="G" curRtlType="LEFT" />
+		<Currency curName="Euro" curIsoCd="EUR" curCulture="fr-FR" curSymbol="E" curRtlType="LEFT"/>
+		<Currency curName="US Dollar" curIsoCd="USD" curCulture="en-US" curSymbol="$" curRtlType="LEFT"/>
+		<Currency curName="Indian Rupees" curIsoCd="INR" curCulture="en-US" curSymbol="Rs" curRtlType="LEFT"/>
+	</Currencys>
+	<Countrys>
+		<Country ctrIsoCd="AF" ctrName="Afghanistan" ctrDialCode="93" />
+		<Country ctrIsoCd="AL" ctrName="Albania" ctrDialCode="355" />
+		<Country ctrIsoCd="DZ" ctrName="Algeria" ctrDialCode="213" />
+		<Country ctrIsoCd="AS" ctrName="American Samoa" ctrDialCode="684" />
+		<Country ctrIsoCd="AD" ctrName="Andorra" ctrDialCode="376" />
+		<Country ctrIsoCd="AO" ctrName="Angola" ctrDialCode="244" />
+		<Country ctrIsoCd="AI" ctrName="Anguilla" ctrDialCode="264" />
+		<Country ctrIsoCd="AQ" ctrName="Antarctica" ctrDialCode="672" />
+		<Country ctrIsoCd="AG" ctrName="Antigua and Barbuda" ctrDialCode="268" />
+		<Country ctrIsoCd="AR" ctrName="Argentina" ctrDialCode="54" />
+		<Country ctrIsoCd="AM" ctrName="Armenia" ctrDialCode="374" />
+		<Country ctrIsoCd="AW" ctrName="Aruba" ctrDialCode="297" />
+		<Country ctrIsoCd="AU" ctrName="Australia" ctrDialCode="61" />
+		<Country ctrIsoCd="AT" ctrName="Austria" ctrDialCode="43" />
+		<Country ctrIsoCd="AZ" ctrName="Azerbaidjan" ctrDialCode="994" />
+		<Country ctrIsoCd="BS" ctrName="Bahamas" ctrDialCode="242" />
+		<Country ctrIsoCd="BH" ctrName="Bahrain" ctrDialCode="973" />
+		<Country ctrIsoCd="BD" ctrName="Bangladesh" ctrDialCode="880" />
+		<Country ctrIsoCd="BB" ctrName="Barbados" ctrDialCode="246" />
+		<Country ctrIsoCd="BY" ctrName="Belarus" ctrDialCode="375" />
+		<Country ctrIsoCd="BE" ctrName="Belgium" ctrDialCode="32" />
+		<Country ctrIsoCd="BZ" ctrName="Belize" ctrDialCode="501" />
+		<Country ctrIsoCd="BJ" ctrName="Benin" ctrDialCode="229" />
+		<Country ctrIsoCd="BM" ctrName="Bermuda" ctrDialCode="1441" />
+		<Country ctrIsoCd="BT" ctrName="Bhutan" ctrDialCode="975" />
+		<Country ctrIsoCd="BO" ctrName="Bolivia" ctrDialCode="591" />
+		<Country ctrIsoCd="BA" ctrName="Bosnia-Herzegovina" ctrDialCode="387" />
+		<Country ctrIsoCd="BW" ctrName="Botswana" ctrDialCode="267" />
+		<Country ctrIsoCd="BR" ctrName="Brazil" ctrDialCode="55" />
+		<Country ctrIsoCd="BN" ctrName="Brunei Darussalam" ctrDialCode="673" />
+		<Country ctrIsoCd="BG" ctrName="Bulgaria" ctrDialCode="359" />
+		<Country ctrIsoCd="BF" ctrName="Burkina Faso" ctrDialCode="226" />
+		<Country ctrIsoCd="BI" ctrName="Burundi" ctrDialCode="257" />
+		<Country ctrIsoCd="KH" ctrName="Cambodia" ctrDialCode="855" />
+		<Country ctrIsoCd="CM" ctrName="Cameroon" ctrDialCode="237" />
+		<Country ctrIsoCd="CA" ctrName="Canada" ctrDialCode="1" />
+		<Country ctrIsoCd="CV" ctrName="Cape Verde" ctrDialCode="238" />
+		<Country ctrIsoCd="KY" ctrName="Cayman Islands" ctrDialCode="345" />
+		<Country ctrIsoCd="CF" ctrName="Central African Republic" ctrDialCode="236" />
+		<Country ctrIsoCd="TD" ctrName="Chad" ctrDialCode="235" />
+		<Country ctrIsoCd="CL" ctrName="Chile" ctrDialCode="56" />
+		<Country ctrIsoCd="CN" ctrName="China" ctrDialCode="86" />
+		<Country ctrIsoCd="CO" ctrName="Colombia" ctrDialCode="57" />
+		<Country ctrIsoCd="KM" ctrName="Comoros" ctrDialCode="269" />
+		<Country ctrIsoCd="CG" ctrName="Congo" ctrDialCode="242" />
+		<Country ctrIsoCd="CK" ctrName="Cook Islands" ctrDialCode="682" />
+		<Country ctrIsoCd="CR" ctrName="Costa Rica" ctrDialCode="506" />
+		<Country ctrIsoCd="HR" ctrName="Croatia" ctrDialCode="385" />
+		<Country ctrIsoCd="CU" ctrName="Cuba" ctrDialCode="53" />
+		<Country ctrIsoCd="CY" ctrName="Cyprus" ctrDialCode="357" />
+		<Country ctrIsoCd="CZ" ctrName="Czech Republic" ctrDialCode="420" />
+		<Country ctrIsoCd="DK" ctrName="Denmark" ctrDialCode="45" />
+		<Country ctrIsoCd="A1" ctrName="Diego Garcia Audiotext" ctrDialCode="246" />
+		<Country ctrIsoCd="DJ" ctrName="Djibouti" ctrDialCode="253" />
+		<Country ctrIsoCd="DM" ctrName="Dominica" ctrDialCode="767" />
+		<Country ctrIsoCd="DO" ctrName="Dominican Republic" ctrDialCode="809" />
+		<Country ctrIsoCd="EC" ctrName="Ecuador" ctrDialCode="593" />
+		<Country ctrIsoCd="EG" ctrName="Egypt" ctrDialCode="20" />
+		<Country ctrIsoCd="SV" ctrName="El Salvador" ctrDialCode="503" />
+		<Country ctrIsoCd="GQ" ctrName="Equatorial Guinea" ctrDialCode="240" />
+		<Country ctrIsoCd="EE" ctrName="Estonia" ctrDialCode="372" />
+		<Country ctrIsoCd="ET" ctrName="Ethiopia" ctrDialCode="251" />
+		<Country ctrIsoCd="FK" ctrName="Falkland Islands" ctrDialCode="500" />
+		<Country ctrIsoCd="FO" ctrName="Faroe Islands" ctrDialCode="298" />
+		<Country ctrIsoCd="FJ" ctrName="Fiji" ctrDialCode="679" />
+		<Country ctrIsoCd="FI" ctrName="Finland" ctrDialCode="358" />
+		<Country ctrIsoCd="CS" ctrName="Former Czechoslovakia" ctrDialCode="420" />
+		<Country ctrIsoCd="SU" ctrName="Former USSR" ctrDialCode="7" />
+		<Country ctrIsoCd="FR" ctrName="France" ctrDialCode="33" />
+		<Country ctrIsoCd="GF" ctrName="French Guyana" ctrDialCode="594" />
+		<Country ctrIsoCd="TF" ctrName="French Southern Territories" ctrDialCode="689" />
+		<Country ctrIsoCd="GA" ctrName="Gabon" ctrDialCode="241" />
+		<Country ctrIsoCd="GM" ctrName="Gambia" ctrDialCode="220" />
+		<Country ctrIsoCd="GE" ctrName="Georgia" ctrDialCode="995" />
+		<Country ctrIsoCd="DE" ctrName="Germany" ctrDialCode="49" />
+		<Country ctrIsoCd="GH" ctrName="Ghana" ctrDialCode="233" />
+		<Country ctrIsoCd="GI" ctrName="Gibraltar" ctrDialCode="350" />
+		<Country ctrIsoCd="GB" ctrName="Great Britain" ctrDialCode="44" />
+		<Country ctrIsoCd="GR" ctrName="Greece" ctrDialCode="30" />
+		<Country ctrIsoCd="GL" ctrName="Greenland" ctrDialCode="299" />
+		<Country ctrIsoCd="GD" ctrName="Grenada" ctrDialCode="473" />
+		<Country ctrIsoCd="GP" ctrName="Guadeloupe (French)" ctrDialCode="590" />
+		<Country ctrIsoCd="GU" ctrName="Guam (USA)" ctrDialCode="671" />
+		<Country ctrIsoCd="GT" ctrName="Guatemala" ctrDialCode="502" />
+		<Country ctrIsoCd="GN" ctrName="Guinea" ctrDialCode="224" />
+		<Country ctrIsoCd="GW" ctrName="Guinea Bissau" ctrDialCode="245" />
+		<Country ctrIsoCd="GY" ctrName="Guyana" ctrDialCode="592" />
+		<Country ctrIsoCd="HT" ctrName="Haiti" ctrDialCode="509" />
+		<Country ctrIsoCd="HN" ctrName="Honduras" ctrDialCode="504" />
+		<Country ctrIsoCd="HK" ctrName="Hong Kong" ctrDialCode="852" />
+		<Country ctrIsoCd="HU" ctrName="Hungary" ctrDialCode="36" />
+		<Country ctrIsoCd="IS" ctrName="Iceland" ctrDialCode="354" />
+		<Country ctrIsoCd="IN" ctrName="India" ctrDialCode="91" />
+		<Country ctrIsoCd="ID" ctrName="Indonesia" ctrDialCode="62" />
+		<Country ctrIsoCd="IR" ctrName="Iran" ctrDialCode="98" />
+		<Country ctrIsoCd="IQ" ctrName="Iraq" ctrDialCode="964" />
+		<Country ctrIsoCd="IE" ctrName="Ireland" ctrDialCode="353" />
+		<Country ctrIsoCd="IL" ctrName="Israel" ctrDialCode="972" />
+		<Country ctrIsoCd="IT" ctrName="Italy" ctrDialCode="39" />
+		<Country ctrIsoCd="CI" ctrName="Ivory Coast (Cote D&apos;Ivoire)" ctrDialCode="225" />
+		<Country ctrIsoCd="JM" ctrName="Jamaica" ctrDialCode="876" />
+		<Country ctrIsoCd="JP" ctrName="Japan" ctrDialCode="81" />
+		<Country ctrIsoCd="JO" ctrName="Jordan" ctrDialCode="962" />
+		<Country ctrIsoCd="KZ" ctrName="Kazakhstan" ctrDialCode="7" />
+		<Country ctrIsoCd="KE" ctrName="Kenya" ctrDialCode="254" />
+		<Country ctrIsoCd="KI" ctrName="Kiribati" ctrDialCode="686" />
+		<Country ctrIsoCd="KW" ctrName="Kuwait" ctrDialCode="965" />
+		<Country ctrIsoCd="LA" ctrName="Laos" ctrDialCode="856" />
+		<Country ctrIsoCd="LV" ctrName="Latvia" ctrDialCode="371" />
+		<Country ctrIsoCd="LB" ctrName="Lebanon" ctrDialCode="961" />
+		<Country ctrIsoCd="LS" ctrName="Lesotho" ctrDialCode="266" />
+		<Country ctrIsoCd="LR" ctrName="Liberia" ctrDialCode="231" />
+		<Country ctrIsoCd="LY" ctrName="Libya" ctrDialCode="218" />
+		<Country ctrIsoCd="LI" ctrName="Liechtenstein" ctrDialCode="41" />
+		<Country ctrIsoCd="LT" ctrName="Lithuania" ctrDialCode="370" />
+		<Country ctrIsoCd="LU" ctrName="Luxembourg" ctrDialCode="351" />
+		<Country ctrIsoCd="MO" ctrName="Macau" ctrDialCode="853" />
+		<Country ctrIsoCd="MK" ctrName="Macedonia" ctrDialCode="389" />
+		<Country ctrIsoCd="MG" ctrName="Madagascar" ctrDialCode="261" />
+		<Country ctrIsoCd="MW" ctrName="Malawi" ctrDialCode="265" />
+		<Country ctrIsoCd="MY" ctrName="Malaysia" ctrDialCode="60" />
+		<Country ctrIsoCd="MV" ctrName="Maldives" ctrDialCode="960" />
+		<Country ctrIsoCd="ML" ctrName="Mali" ctrDialCode="223" />
+		<Country ctrIsoCd="MT" ctrName="Malta" ctrDialCode="356" />
+		<Country ctrIsoCd="MH" ctrName="Marshall Islands" ctrDialCode="692" />
+		<Country ctrIsoCd="MQ" ctrName="Martinique (French)" ctrDialCode="596" />
+		<Country ctrIsoCd="MR" ctrName="Mauritania" ctrDialCode="222" />
+		<Country ctrIsoCd="MU" ctrName="Mauritius" ctrDialCode="230" />
+		<Country ctrIsoCd="YT" ctrName="Mayotte" ctrDialCode="269" />
+		<Country ctrIsoCd="MX" ctrName="Mexico" ctrDialCode="52" />
+		<Country ctrIsoCd="FM" ctrName="Micronesia" ctrDialCode="691" />
+		<Country ctrIsoCd="MD" ctrName="Moldavia" ctrDialCode="976" />
+		<Country ctrIsoCd="MN" ctrName="Mongolia" ctrDialCode="976" />
+		<Country ctrIsoCd="MS" ctrName="Montserrat" ctrDialCode="664" />
+		<Country ctrIsoCd="MA" ctrName="Morocco" ctrDialCode="212" />
+		<Country ctrIsoCd="MZ" ctrName="Mozambique" ctrDialCode="258" />
+		<Country ctrIsoCd="MM" ctrName="Myanmar" ctrDialCode="95" />
+		<Country ctrIsoCd="NA" ctrName="Namibia" ctrDialCode="264" />
+		<Country ctrIsoCd="NR" ctrName="Nauru" ctrDialCode="674" />
+		<Country ctrIsoCd="NP" ctrName="Nepal" ctrDialCode="977" />
+		<Country ctrIsoCd="NL" ctrName="Netherlands" ctrDialCode="31" />
+		<Country ctrIsoCd="AN" ctrName="Netherlands Antilles" ctrDialCode="599" />
+		<Country ctrIsoCd="NC" ctrName="New Caledonia (French)" ctrDialCode="687" />
+		<Country ctrIsoCd="NZ" ctrName="New Zealand" ctrDialCode="64" />
+		<Country ctrIsoCd="NI" ctrName="Nicaragua" ctrDialCode="505" />
+		<Country ctrIsoCd="NE" ctrName="Niger" ctrDialCode="227" />
+		<Country ctrIsoCd="NG" ctrName="Nigeria" ctrDialCode="234" />
+		<Country ctrIsoCd="NU" ctrName="Niue" ctrDialCode="683" />
+		<Country ctrIsoCd="NF" ctrName="Norfolk Island" ctrDialCode="72" />
+		<Country ctrIsoCd="KP" ctrName="North Korea" ctrDialCode="850" />
+		<Country ctrIsoCd="MP" ctrName="Northern Mariana Islands" ctrDialCode="670" />
+		<Country ctrIsoCd="NO" ctrName="Norway" ctrDialCode="47" />
+		<Country ctrIsoCd="OM" ctrName="Oman" ctrDialCode="968" />
+		<Country ctrIsoCd="PK" ctrName="Pakistan" ctrDialCode="92" />
+		<Country ctrIsoCd="PW" ctrName="Palau" ctrDialCode="680" />
+		<Country ctrIsoCd="PA" ctrName="Panama" ctrDialCode="507" />
+		<Country ctrIsoCd="PG" ctrName="Papua New Guinea" ctrDialCode="675" />
+		<Country ctrIsoCd="PY" ctrName="Paraguay" ctrDialCode="595" />
+		<Country ctrIsoCd="PE" ctrName="Peru" ctrDialCode="51" />
+		<Country ctrIsoCd="PH" ctrName="Philippines" ctrDialCode="63" />
+		<Country ctrIsoCd="PL" ctrName="Poland" ctrDialCode="48" />
+		<Country ctrIsoCd="PF" ctrName="Polynesia (French)" ctrDialCode="689" />
+		<Country ctrIsoCd="PT" ctrName="Portugal" ctrDialCode="351" />
+		<Country ctrIsoCd="PR" ctrName="Puerto Rico" ctrDialCode="787" />
+		<Country ctrIsoCd="QA" ctrName="Qatar" ctrDialCode="974" />
+		<Country ctrIsoCd="RE" ctrName="Reunion (French)" ctrDialCode="262" />
+		<Country ctrIsoCd="RO" ctrName="Romania" ctrDialCode="40" />
+		<Country ctrIsoCd="RU" ctrName="Russian Federation" ctrDialCode="7" />
+		<Country ctrIsoCd="RW" ctrName="Rwanda" ctrDialCode="250" />
+		<Country ctrIsoCd="SH" ctrName="Saint Helena" ctrDialCode="290" />
+		<Country ctrIsoCd="KN" ctrName="Saint Kitts &amp; Nevis Anguilla" ctrDialCode="869" />
+		<Country ctrIsoCd="LC" ctrName="Saint Lucia" ctrDialCode="758" />
+		<Country ctrIsoCd="PM" ctrName="Saint Pierre and Miquelon" ctrDialCode="508" />
+		<Country ctrIsoCd="ST" ctrName="Saint Tome (Sao Tome) and Prin" ctrDialCode="239" />
+		<Country ctrIsoCd="VC" ctrName="Saint Vincent &amp; Grenadines" ctrDialCode="784" />
+		<Country ctrIsoCd="WS" ctrName="Samoa" ctrDialCode="685" />
+		<Country ctrIsoCd="SM" ctrName="San Marino" ctrDialCode="378" />
+		<Country ctrIsoCd="SA" ctrName="Saudi Arabia" ctrDialCode="966" />
+		<Country ctrIsoCd="SN" ctrName="Senegal" ctrDialCode="221" />
+		<Country ctrIsoCd="SC" ctrName="Seychelles" ctrDialCode="248" />
+		<Country ctrIsoCd="SL" ctrName="Sierra Leone" ctrDialCode="232" />
+		<Country ctrIsoCd="SG" ctrName="Singapore" ctrDialCode="65" />
+		<Country ctrIsoCd="SK" ctrName="Slovak Republic" ctrDialCode="421" />
+		<Country ctrIsoCd="SI" ctrName="Slovenia" ctrDialCode="386" />
+		<Country ctrIsoCd="SB" ctrName="Solomon Islands" ctrDialCode="677" />
+		<Country ctrIsoCd="SO" ctrName="Somalia" ctrDialCode="252" />
+		<Country ctrIsoCd="ZA" ctrName="South Africa" ctrDialCode="27" />
+		<Country ctrIsoCd="KR" ctrName="South Korea" ctrDialCode="82" />
+		<Country ctrIsoCd="ES" ctrName="Spain" ctrDialCode="34" />
+		<Country ctrIsoCd="LK" ctrName="Sri Lanka" ctrDialCode="94" />
+		<Country ctrIsoCd="SD" ctrName="Sudan" ctrDialCode="249" />
+		<Country ctrIsoCd="SR" ctrName="Suriname" ctrDialCode="597" />
+		<Country ctrIsoCd="SZ" ctrName="Swaziland" ctrDialCode="268" />
+		<Country ctrIsoCd="SE" ctrName="Sweden" ctrDialCode="46" />
+		<Country ctrIsoCd="CH" ctrName="Switzerland" ctrDialCode="41" />
+		<Country ctrIsoCd="SY" ctrName="Syria" ctrDialCode="963" />
+		<Country ctrIsoCd="TJ" ctrName="Tadjikistan" ctrDialCode="992" />
+		<Country ctrIsoCd="TW" ctrName="Taiwan" ctrDialCode="886" />
+		<Country ctrIsoCd="TZ" ctrName="Tanzania" ctrDialCode="255" />
+		<Country ctrIsoCd="TH" ctrName="Thailand" ctrDialCode="66" />
+		<Country ctrIsoCd="TG" ctrName="Togo" ctrDialCode="228" />
+		<Country ctrIsoCd="TO" ctrName="Tonga" ctrDialCode="676" />
+		<Country ctrIsoCd="TT" ctrName="Trinidad and Tobago" ctrDialCode="868" />
+		<Country ctrIsoCd="TN" ctrName="Tunisia" ctrDialCode="21" />
+		<Country ctrIsoCd="TR" ctrName="Turkey" ctrDialCode="90" />
+		<Country ctrIsoCd="TM" ctrName="Turkmenistan" ctrDialCode="993" />
+		<Country ctrIsoCd="TC" ctrName="Turks and Caicos Islands" ctrDialCode="649" />
+		<Country ctrIsoCd="TV" ctrName="Tuvalu" ctrDialCode="688" />
+		<Country ctrIsoCd="UG" ctrName="Uganda" ctrDialCode="256" />
+		<Country ctrIsoCd="UA" ctrName="Ukraine" ctrDialCode="380" />
+		<Country ctrIsoCd="AE" ctrName="United Arab Emirates" ctrDialCode="971" />
+		<Country ctrIsoCd="US" ctrName="United States" ctrDialCode="1" />
+		<Country ctrIsoCd="ZZ" ctrName="Unknown" ctrDialCode="00" />
+		<Country ctrIsoCd="UY" ctrName="Uruguay" ctrDialCode="598" />
+		<Country ctrIsoCd="UZ" ctrName="Uzbekistan" ctrDialCode="998" />
+		<Country ctrIsoCd="VU" ctrName="Vanuatu" ctrDialCode="678" />
+		<Country ctrIsoCd="VA" ctrName="Vatican City State" ctrDialCode="379" />
+		<Country ctrIsoCd="VE" ctrName="Venezuela" ctrDialCode="58" />
+		<Country ctrIsoCd="VN" ctrName="Vietnam" ctrDialCode="84" />
+		<Country ctrIsoCd="VG" ctrName="Virgin Islands (British)" ctrDialCode="284" />
+		<Country ctrIsoCd="VI" ctrName="Virgin Islands (USA)" ctrDialCode="340" />
+		<Country ctrIsoCd="WF" ctrName="Wallis and Futuna Islands" ctrDialCode="681" />
+		<Country ctrIsoCd="YE" ctrName="Yemen" ctrDialCode="967" />
+		<Country ctrIsoCd="YU" ctrName="Yugoslavia" ctrDialCode="381" />
+		<Country ctrIsoCd="ZR" ctrName="Zaire" ctrDialCode="243" />
+		<Country ctrIsoCd="ZM" ctrName="Zambia" ctrDialCode="260" />
+		<Country ctrIsoCd="ZW" ctrName="Zimbabwe" ctrDialCode="263" />
+	</Countrys>
+	<RoleTbls>
+		<RoleTbl rolName="Root" pigName="Root Role Properties" pigPdgKey="RoleProperties" />
+		<RoleTbl rolName="Administrator" pigName="Administrator Role Properties" pigPdgKey="RoleProperties" />
+		<RoleTbl rolName="Guest" pigName="Guest Role Properties" pigPdgKey="RoleProperties" />
+	</RoleTbls> -->
+	<UserTbls>
+			<UserTbl usrName="Root" usrPassword="403E6FE0ABA1F3F9A1D1FAB4A8451CB9F322569FBAEE62B5E2FA992FB43B6B0114EADB4A46376B1F0619FF5417ED47DBB1076FE554023CCB19863BEC865D0B6A" usrForename="System" usrSurname="Root" pigName="Root User Properties" pigPdgKey="UserProperties" usrEmailAddress="root@deft.com" usrMobNo="9876543210" usrMobVerifyFl="true" usrEmailVerifyFl="true" usrCurrEncryptFl="true" usrExpiryDttm="2030-01-01 00:00:00" ctrIsoCd="IN"/>
+			<UserTbl usrName="Admin" usrPassword="403E6FE0ABA1F3F9A1D1FAB4A8451CB9F322569FBAEE62B5E2FA992FB43B6B0114EADB4A46376B1F0619FF5417ED47DBB1076FE554023CCB19863BEC865D0B6A" usrForename="System" usrSurname="Administrator" pigName="Administrator User Properties" pigPdgKey="UserProperties" usrEmailAddress="admin@deft.com" usrMobNo="9876543201" usrMobVerifyFl="true" usrEmailVerifyFl="true" usrCurrEncryptFl="true" usrExpiryDttm="2030-01-01 00:00:00" ctrIsoCd="IN"/>
+			<UserTbl usrName="nabin.jena" usrPassword="403E6FE0ABA1F3F9A1D1FAB4A8451CB9F322569FBAEE62B5E2FA992FB43B6B0114EADB4A46376B1F0619FF5417ED47DBB1076FE554023CCB19863BEC865D0B6A" usrForename="Nabin Kuldeep" usrSurname="Jena" pigName="Root User Properties" pigPdgKey="UserProperties" usrEmailAddress="nabin.jena@deft.com" usrMobNo="9876543120" usrMobVerifyFl="true" usrEmailVerifyFl="true" usrCurrEncryptFl="true" usrExpiryDttm="2030-01-01 00:00:00" ctrIsoCd="IN"/>
+  </UserTbls>
+  <UserPasswords>
+		<UserPassword upwChangingUsrName="Root" upwEffectedUsrName="Root" upwDttm="2007-01-01 00:00:00" upwPassword="4F2F5B246A89D8EBD7FAA76D32CE63E5" />
+		<UserPassword upwChangingUsrName="Admin" upwEffectedUsrName="Admin" upwDttm="2007-01-01 00:00:00" upwPassword="4F2F5B246A89D8EBD7FAA76D32CE63E5" />
+		<UserPassword upwChangingUsrName="nabin.jena" upwEffectedUsrName="nabin.jena" upwDttm="2007-01-01 00:00:00" upwPassword="4F2F5B246A89D8EBD7FAA76D32CE63E5" />
+  </UserPasswords>
+</SeedDataRoot>

@@ -1,0 +1,8 @@
+<metadata name="ROCPS" majorVersion="10" minorVersion="0" revisionVersion="0">
+	<database>
+		<databaseSchemas>
+			<databaseSchema path="/com/asjngroup/deft/common/database/metadata/deft_mapping_schema1.xml" />
+			<!-- <databaseSchema path="/com/asjngroup/deft/common/database/metadata/deft_customer_schema.xml" /> -->
+		</databaseSchemas>
+	</database>
+</metadata>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.asjngroup.deft</groupId>
+		<artifactId>deft-server-modules</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<groupId>com.asjngroup.deft</groupId>
+	<artifactId>deft-addons-plugins</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>deft-addons-plugins</name>
+	<packaging>pom</packaging>
+	<url>http://maven.apache.org</url>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	<modules>
+		<module>deft-plugin-otp</module>
+		<module>deft-email-sms</module>
+		<module>deft-plugin-razorpay</module>
+	</modules>
+</project>

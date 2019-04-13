@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema serverPackage="com.asjngroup.deft.common.database.hibernate.references" parentMajorVersion="0" parentMinorVersion="0" majorVersion="1" minorVersion="0" name="Deft" product="Deft" parent="">
+	<entities>
+    <entity entityName="PartitionTbl" entityPrefix="ptn" displayString="ptnName" auditingDisplayString="ptnName">
+      <fields>
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+      <nestedCollections />
+      <constraints>
+        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="ptnName" />
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="ptnId" />
+      </constraints>
+    </entity>
+   <entity entityName="TableDfn" entityPrefix="tbd" auditingDisplayString="tbdName" displayString="tbdName">
+		<constraints>
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="tbdName" />
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tbdId" />
+		</constraints>
+			<nestedCollections>
+				<nestedCollection foreignEntityMappingName="TableColumn" foreignFieldName="tbdId" fieldName="tableColumns" />
+				<nestedCollection foreignEntityMappingName="TableIndex" foreignFieldName="tbdId" fieldName="tableIndexes" />
+				<nestedCollection foreignEntityMappingName="TableInst" foreignFieldName="tbdId" noCopy="true" fieldName="tableInsts" />
+			</nestedCollections>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdPrefix" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdInternalFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdTempFl" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdExtra3" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdCustomExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdCustomExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tbdCustomExtra3" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+	</entity>
+	<entity entityName="TableInst" entityPrefix="tin" displayString="tinDisplayName" auditingDisplayString="tinDisplayName">
+  		<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tinId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdId" />
+				<field datatype="Int" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinParentTinId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tinTableName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tinDisplayName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tinAlias" />
+				<field datatype="Long" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinRowCount" />
+				<field datatype="DateTime" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinLastModifiedDttm" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinExtra3" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinCustomExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinCustomExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tinCustomExtra3" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+			<nestedCollections/>
+			<constraints>
+				<constraint constraintSuffix="ak" isBusinessConstraint="false" isClustered="false" isDisplayName="true" isUnique="true" propertyList="tinDisplayName" />
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tinId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tinTableName" />
+			</constraints>
+	</entity>
+	<entity auditingDisplayString="tclDisplay(tclName)" displayString="tclName" entityName="TableColumn" entityPrefix="tcl">
+			<constraints>
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="tbdId,tclName" />
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tclId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tbdId,tclOrderNo" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tbdId,tclDisplay" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclDisplay" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclOrderNo" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclPrimaryKeyFl" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclType" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclLength" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclMandatoryFl" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclExtra3" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclCustomExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclCustomExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="tclCustomExtra3" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+  	<entity displayString="tbdId - tixSuffix" entityName="TableIndex" entityPrefix="tix" auditingDisplayString="tbdId - tixSuffix">
+			<constraints>
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="tbdId,tixSuffix" />
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tixId" />
+			</constraints>
+			<nestedCollections>
+				<nestedCollection foreignEntityMappingName="TableIndexColumn" foreignFieldName="tixId" fieldName="tableIndexColumns" />
+			</nestedCollections>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tbdId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixSuffix" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixUniqueFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixClusteredFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixRecentDataFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixOlderDataFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="TableIndexColumn" entityPrefix="tic" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="ticId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tixId,ticOrderNo" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tixId,tclId" />
+			</constraints>
+			<nestedCollections />
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ticId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tixId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="tclId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ticOrderNo" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="Component" entityPrefix="cmp" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="cmpId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="cmpName,cptId" />
+			</constraints>
+			<nestedCollections />
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="cmpId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="cptId" />
+				<field datatype="Int" isMandatory="false" isOneToOneNestedObject="false" fieldName="pdgId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="cmpName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="cmpClientComponent" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="cmpServerComponent" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="cmpNewWindow" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="ComponentType" entityPrefix="cpt" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="cptId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="cptTypeCd" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="cptName" />
+			</constraints>
+			<nestedCollections>
+				<nestedCollection foreignEntityMappingName="Component" foreignFieldName="cptId" fieldName="components" />
+			</nestedCollections>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="cptId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="cptName" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="cptTypeCd" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="PropertyDfn" entityPrefix="prd" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="prdId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="true" isDisplayName="false" isUnique="true" propertyList="pdgId,prdKey" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="pdgId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="cmpId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdKey" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdName" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdDefault" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdReadOnlyFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdMandatoryFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdRenderFl" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdExtra1" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdExtra2" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdExtra3" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdExtra4" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="prdExtra5" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="PropertyDfnGroup" entityPrefix="pdg" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="pdgId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="pdgKey" />
+			</constraints>
+			<nestedCollections>
+				<nestedCollection foreignEntityMappingName="PropertyDfn" foreignFieldName="pdgId" fieldName="propertyDfns" />
+			</nestedCollections>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="pdgId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="pdgParentPdgId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="pdgKey" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="pdgName"/>
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="pdgSystemServerPackage"/>
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="PropertyInst" entityPrefix="pri" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="priId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="false" isUnique="true" propertyList="pigId,prdId" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="priId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="pigId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="prdId" />
+				<field datatype="String" isMandatory="false" isOneToOneNestedObject="false" fieldName="priValue" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="PropertyInstGroup" entityPrefix="pig" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="pigId" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="pigId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="pdgId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="false" fieldName="pigName" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="EntityPermission" entityPrefix="enp" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="enpId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="entId,usrId" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="enpId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="entd" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="true" fieldName="usrId" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="enpSearch" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="enpSave" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="enpUpdate" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="enpDelete" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+		<entity displayString="" entityName="EntityTbl" entityPrefix="ent" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="entId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="true" isDisplayName="true" isUnique="true" propertyList="entEntity" />
+			</constraints>
+			<nestedCollections/>
+			<fields>
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="entId" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="true" fieldName="entEntity" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="true" fieldName="entDisplay" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="true" fieldName="entClientComponent" />
+				<field datatype="String" isMandatory="true" isOneToOneNestedObject="true" fieldName="entServerComponent" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="entCacheFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="entAllowNotesFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="entAllowEntityCopyFl" />
+				<field datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" fieldName="deleteFl" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="versionId" />
+				<field datatype="Int" isMandatory="true" isOneToOneNestedObject="false" fieldName="ptnId" />
+			</fields>
+		</entity>
+	 	<entity displayString="" entityName="ScreenTbl" entityPrefix="scr" auditingDisplayString="">
+			<constraints>
+					<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="scrId" />
+					<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="scrName" />
+			</constraints>
+			<nestedCollections/>
+          <fields>
+            <field fieldName="scrId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false"  />
+            <field fieldName="cmpId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true"/>
+            <field fieldName="scrDisplayName" datatype="String"  isMandatory="true" isOneToOneNestedObject="false"/>
+            <field fieldName="scrName" datatype="String"  isMandatory="true" isOneToOneNestedObject="false"  />
+            <field fieldName="imgId" datatype="Int"  isMandatory="false" isOneToOneNestedObject="false"  />
+            <field fieldName="screenType" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false"  />
+			<field fieldName="scrDisallowContextualFl" datatype="Bool"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true" isOneToOneNestedObject="false"  />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false"/>
+          </fields>
+        </entity>
+        <entity displayString="" entityName="ScreenAction" entityPrefix="sac" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="sacId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="sagId,sacName" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="sagId,sacOrderNo" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="sacId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="sagId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="true" />
+            <field fieldName="cmpId" datatype="Int"  isMandatory="false" isOneToOneNestedObject="true" />
+            <field fieldName="sacName" datatype="String"  isMandatory="false" isOneToOneNestedObject="false"  />
+            <field fieldName="sacTooltip" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacDefaultFl" datatype="Bool"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="sacOrderNo" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="sacFavOrderNo" datatype="Int"  isMandatory="false" isOneToOneNestedObject="false"  />
+            <field fieldName="sacFavImgId" datatype="Int"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="imgId" datatype="Int"  isMandatory="false" isOneToOneNestedObject="true" />
+            <field fieldName="sacMaxPaneCount" datatype="Int"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacMaxMenuCount" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="false"/>
+            <field fieldName="sacAuditInfo" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacExtra1" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false"/>
+            <field fieldName="sacExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false"/>
+            <field fieldName="sacExtra4" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacExtra5" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacCustomExtra1" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacCustomExtra2" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacCustomExtra3" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacCustomExtra4" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="sacCustomExtra5" datatype="String"  isMandatory="false" isOneToOneNestedObject="false"  />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true" isOneToOneNestedObject="false"  />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="ScreenActionGroup" entityPrefix="sag" auditingDisplayString="">
+		<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="sagId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="scrId,sagName" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="sagId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="scrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="sagName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="sagTooltip" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="sagOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="imgId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="sagPaneVisibleFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="sagPaneExpandedFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="sagContextGroupFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="ScreenLabel" entityPrefix="sla" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="slaId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="scrId,slaName" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="scrId,slaLabel" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="slaId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="scrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="slaName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="slaLabel" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="Toolbar" entityPrefix="tlb" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tlbId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="appId,tlbCode" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="appId,tlbOrderNo" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="tlbId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="appId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="cmpId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="tlbName" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbListFl" datatype="Bool"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbType" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbCode" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbTopDisplay" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="imgId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="ToolbarItem" entityPrefix="tbi" auditingDisplayString="">
+			<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tbiId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="tlbId,tbiName" />
+				<constraint constraintSuffix="ss2" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="tlbId,tbiOrderNo" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="tbiId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="scrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="tbiName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiTypeCd" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiTopDisplay" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="tlbId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="tbiExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiCustomExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiCustomExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiCustomExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiCustomExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="tbiCustomExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="DefaultGrid" entityPrefix="dgr" auditingDisplayString="">
+		  <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="dgrId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="scrId,entId" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="dgrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="entId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="scrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="DefaultGridColumn" entityPrefix="dgc" auditingDisplayString="">
+          <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="dgcId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="dgrId,dgcOrderNo" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="dgcId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="dgcLabel" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcFieldWidth" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcType" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcVisibleFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcExportFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcSearchableFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcUiComponent" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcSort" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcTextAlign" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcDataProperty" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcNullDisplay" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="dgcCustomExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+			<field fieldName="dgcDisplayResultFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RoleScreen" entityPrefix="rsc" auditingDisplayString="">
+		<constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rscId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rolId,scrId" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="rscId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rolId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="scrId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rscBrowseFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscNewFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscEditFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscRemoveFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscExportFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RoleScreenAction" entityPrefix="rsa" auditingDisplayString="">
+          <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rsaId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rscId,sacId" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="rsaId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="sacId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RoleScreenLabel" entityPrefix="rsl" auditingDisplayString="">
+		 <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rslId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rscId,slaId" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="rslId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rscId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="slaId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RoleSecurityLabel" entityPrefix="rscl" auditingDisplayString="">
+          <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rsclId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rolId,sclId" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="rsclId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rolId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="sclId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rsclBrowseFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RoleTbl" entityPrefix="rol" auditingDisplayString="">
+           <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rolId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rolName" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="rolId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="pigId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="rolName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity entityName="UserTbl" entityPrefix="usr" displayString="usrName" auditingDisplayString="usrName">
+	      <fields>
+	        <field fieldName="usrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="pigId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="defaultAppId" datatype="Int" isMandatory="false" isOneToOneNestedObject="false" />
+	        <field fieldName="usrName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrPassword" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrForename" datatype="String" isMandatory="false" isOneToOneNestedObject="false" />
+	        <field fieldName="usrSurname" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrEmailAddress" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrMobNo" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrDescription" datatype="String" isMandatory="false" isOneToOneNestedObject="false" />
+	        <field fieldName="ctrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrExpiryDttm" datatype="DateTime" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrDisabledFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrMobVerifyFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrEmailVerifyFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="usrCurrEncryptFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+	        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+	      </fields>
+      <!-- nested object - country id -->
+      <nestedCollections>
+	      <nestedCollection fieldName="applicationUsers" foreignEntityMappingName="ApplicationUser" foreignFieldName="usrId" />
+	  </nestedCollections>
+      <constraints>
+        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="usrName" />
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="usrId" />
+      </constraints>
+    </entity>
+    <entity entityName="UserPassword" entityPrefix="upw" displayString="" auditingDisplayString="">
+      <fields>
+        <field fieldName="upwId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="upwChangingUsrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="upwEffectedUsrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="upwDttm" datatype="DateTime" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="upwPassword" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="upwResetFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+       <nestedCollections>
+	  </nestedCollections>
+      <constraints>
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="upwId" />
+        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="upwEffectedUsrId,upwDttm" />
+      </constraints>
+    </entity>
+    <entity entityName="ImageGroup" entityPrefix="igp" displayString="igpName" auditingDisplayString="igpName">
+      <fields>
+        <field fieldName="igpId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="igpName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+      <nestedCollections>
+	  	<nestedCollection fieldName="imageTbls" foreignEntityMappingName="ImageTbl" foreignFieldName="igpId" />
+	  </nestedCollections>
+      <constraints>
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="igpId" />
+      </constraints>
+    </entity>
+     <entity entityName="ImageTbl" entityPrefix="img" displayString="imgName" auditingDisplayString="imgName">
+      <fields>
+        <field fieldName="imgId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="igpId" datatype="Int" isMandatory="true" isOneToOneNestedObject="true" />
+        <field fieldName="imgName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="imgPath" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+	  <nestedCollections/>
+      <constraints>
+        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="imgName" />
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="imgId" />
+      </constraints>
+    </entity>
+    <entity entityName="ApplicationTbl" entityPrefix="app" displayString="appName" auditingDisplayString="">
+      <fields>
+        <field fieldName="appId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="appName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="appCode" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="appLogoImgId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+      <nestedCollections>
+	  </nestedCollections>
+      <constraints>
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="appId" />
+        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="appName" />
+      </constraints>
+    </entity>
+    <entity displayString="" entityName="SecurityLabel" entityPrefix="scl">
+          <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="sclId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="sclLabel" />
+		  </constraints>
+		  <nestedCollections/>
+		  <fields>
+            <field fieldName="sclId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="sclName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="sclLabel" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="UiActionItem" entityPrefix="uai">
+		  <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="uaiId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="uaiCode" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="uaiId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          <!--   <field fieldName="eagId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="false" /> -->
+            <field fieldName="uaiParentUaiId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="cmpId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="imgId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="true" />
+            <field fieldName="uaiCode" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiDisplay" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiDescription" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiParentActionUaiId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="entId" datatype="Int"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiCustomExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiCustomExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiCustomExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiCustomExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="uaiCustomExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        
+       <entity displayString="" entityName="RoleRefTable" entityPrefix="rrf">
+	       <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rrfId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="false" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rolId,rftId" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="rrfId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rolId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rftId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rrfReadFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rrfNewFl" datatype="Bool"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rrfEditFl" datatype="Bool"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rrfRemoveFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rrfExportFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RefTable" entityPrefix="rft">
+		    <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rftId" />
+				<constraint constraintSuffix="ak" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rftName" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="entId" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="rftId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="entId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rftName" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rftSiteSpecificFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rftVisibleFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+        <entity displayString="" entityName="RefTableColumn" entityPrefix="rfc">
+		  <constraints>
+				<constraint constraintSuffix="pk" isBusinessConstraint="false" isClustered="false" isDisplayName="false" isUnique="true" propertyList="rfcId" />
+				<constraint constraintSuffix="ss1" isBusinessConstraint="true" isClustered="false" isDisplayName="true" isUnique="true" propertyList="rftId,rfcLabel" />
+		  </constraints>
+		  <nestedCollections/>
+          <fields>
+            <field fieldName="rfcId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rftId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="true" />
+            <field fieldName="rfcLabel" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcType" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcDataProperty" datatype="String"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcOrderNo" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcVisibleFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcSortFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcSearchableFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcMandatoryFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcCustomExtra1" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcCustomExtra2" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcCustomExtra3" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcCustomExtra4" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcCustomExtra5" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcReadOnlyFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="rfcDefault" datatype="String"  isMandatory="false"  isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true"  isOneToOneNestedObject="false" />
+          </fields>
+        </entity>
+      <entity entityName="ApplicationUser" entityPrefix="apu" displayString="" auditingDisplayString="">
+      <fields>
+        <field fieldName="apuId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="appId" datatype="Int" isMandatory="true" isOneToOneNestedObject="true" />
+        <field fieldName="usrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="true" />
+        <field fieldName="apuStartupTbiId" datatype="Int" isMandatory="false" isOneToOneNestedObject="true"/>
+        <field fieldName="apuStartupHelper" datatype="Int" isMandatory="false" isOneToOneNestedObject="false" />
+        <field fieldName="apuAccessFl" datatype="Bool" isMandatory="false" isOneToOneNestedObject="false" />
+        <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+        <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+      </fields>
+      <nestedCollections>
+	  </nestedCollections>
+      <constraints>
+        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="uaaId" />
+        <constraint constraintSuffix="ss1" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="appId,usrId" />
+      </constraints>
+    </entity>
+     <entity entityName="UserRolePartition" entityPrefix="urp" displayString="" auditingDisplayString="">
+          <fields>
+            <field fieldName="urpId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="usrId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="true" />
+            <field fieldName="rolId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="true" />
+            <field fieldName="urpPtnId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int"  isMandatory="true" isOneToOneNestedObject="false" />
+          </fields>
+          <nestedCollections>
+	  	  </nestedCollections>
+	      <constraints>
+	        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="urpId" />
+	        <constraint constraintSuffix="ss1" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="true" propertyList="usrId,rolId,urpPtnId" />
+	      </constraints>
+        </entity>
+        <entity entityName="Country" entityPrefix="ctr" displayString="" auditingDisplayString="">
+          <fields>
+            <field fieldName="ctrId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ctrIsoCd" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ctrName" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ctrDialCode" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+          </fields>
+          <nestedCollections>
+	  	  </nestedCollections>
+	      <constraints>
+	        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="ctrId" />
+	        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="ctrIsoCd" />
+	        <constraint constraintSuffix="ss1" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="ctrName" />
+	      </constraints>
+        </entity>
+        <entity entityName="Currency" entityPrefix="cur"  displayString="" auditingDisplayString="">
+          <fields>
+            <field fieldName="curId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="curName" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="curIsoCd" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="curCulture" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+			<field fieldName="curSymbol" datatype="String"  isMandatory="false" isOneToOneNestedObject="false" />
+            <field fieldName="curRtlType" datatype="String"  isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+          </fields>
+          <nestedCollections>
+	  	  </nestedCollections>
+	      <constraints>
+	        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="curId" />
+	        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="curIsoCd" />
+	        <constraint constraintSuffix="ss1" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="curName" />
+	      </constraints>
+        </entity>
+        <entity entityName="UserPasswordValidation" entityPrefix="upv" displayString="" auditingDisplayString="">
+          <fields>
+            <field fieldName="upvId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="cmpId" datatype="Int" isMandatory="true" isOneToOneNestedObject="true" />
+            <field fieldName="pigId" datatype="Int" isMandatory="true" isOneToOneNestedObject="true" />
+            <field fieldName="upvName" datatype="String" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="deleteFl" datatype="Bool" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="versionId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+            <field fieldName="ptnId" datatype="Int" isMandatory="true" isOneToOneNestedObject="false" />
+          </fields>
+          <constraints>
+	        <constraint constraintSuffix="pk" isUnique="true" isClustered="false" isBusinessConstraint="false" isDisplayName="false" propertyList="upvId" />
+	        <constraint constraintSuffix="ak" isUnique="true" isClustered="false" isBusinessConstraint="true" isDisplayName="true" propertyList="upvName" />
+	      </constraints>
+	       <nestedCollections/>
+        </entity>
+  </entities>
+</schema>

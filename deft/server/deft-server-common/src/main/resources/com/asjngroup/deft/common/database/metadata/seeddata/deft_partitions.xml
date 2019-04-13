@@ -1,0 +1,9 @@
+<PartitionsRoot>
+    <PartitionTbls>
+        <PartitionTbl ptnName="System"/>
+        <PartitionTbl ptnName="Common"/>
+        <PartitionTbl ptnName="Local"/>
+        <PartitionTbl ptnName="National"/>
+        <PartitionTbl ptnName="InterNational"/>
+    </PartitionTbls>
+</PartitionsRoot>

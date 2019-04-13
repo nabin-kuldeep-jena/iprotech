@@ -1,0 +1,46 @@
+<ion-header>
+    <ion-navbar color="primary" hideBackButton="true">
+        <button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+
+        <ion-title>Account Settings</ion-title>
+    </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-list>
+        <ion-item>
+            <ion-label><ion-icon name="person"></ion-icon></ion-label>
+            <ion-input type="text" value="{{user.name}}"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label><ion-icon name="mail"></ion-icon></ion-label>
+            <ion-input type="text" value="{{user.mail}}"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+            <ion-label><ion-icon name="call"></ion-icon></ion-label>
+            <ion-input type="tel" value="{{user.contact}}" maxlength="10"></ion-input>
+        </ion-item>
+
+        <ion-item>
+            <ion-label><ion-icon name="paper"></ion-icon></ion-label>
+            <ion-input type="text" value="{{user.address}}"></ion-input>
+        </ion-item>
+    </ion-list>
+
+    <div  style="text-align: center;">
+        <button ion-button (click)="saveSettings()">Save Changes</button>
+    </div>
+    <hr style="border-top: 1px dashed;" />
+
+    <div>
+        <ion-list>
+            <ion-item (click)="changePassword()">Change Password</ion-item>
+            <ion-item (click)="deactivateAccount()">Deactivate Account</ion-item>
+        </ion-list>
+    </div>
+</ion-content>

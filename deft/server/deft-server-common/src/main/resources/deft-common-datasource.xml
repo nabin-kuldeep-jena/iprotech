@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd">
+
+	<!-- SessionFactory setup in a Spring container -->
+
+	<beans>
+
+
+		<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+			<property name="poolName" value="deftHikariCP" />
+			<property name="connectionTestQuery" value="SELECT 1" />
+			<property name="dataSourceClassName" value="${hibernate.dataSourceClassName}" />
+			<property name="maximumPoolSize" value="${hibernate.hikari.maximumPoolSize}" />
+			<property name="idleTimeout" value="${hibernate.hikari.idleTimeout}" />
+
+			<property name="dataSourceProperties">
+				<props>
+					<prop key="url">${dataSource.url}</prop>
+					<prop key="user">${dataSource.username}</prop>
+					<prop key="password">${dataSource.password}</prop>
+				</props>
+			</property>
+		</bean>
+		<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+			<constructor-arg index="0" ref="hikariConfig" />
+		</bean>
+
+		<!-- Hibernate Session factory configuration -->
+		<bean id="sessionFactory"
+			class="com.asjngroup.deft.common.database.hibernate.DeftSessionFactoryBean">
+			<property name="dataSource" ref="dataSource" />
+			<property name="packagesToScan" value="com.asjngroup.deft.common.database.hibernate.references"/>
+				<!-- <list>
+					<value>com.asjngroup.deft.common.database.hibernate
+					</value>
+				</list>
+			</property>
+			<property name="annotatedPackages">
+				<list>
+					<value>com.asjngroup.deft.common.database.hibernate.references.*
+					</value>
+				</list>
+			</property> -->
+			<property name="hibernateProperties">
+				<props>
+					<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+					<prop key="hibernate.show_sql">${hibernate.show_sql:false}</prop>
+					<prop key="hibernate.format_sql">${hibernate.format_sql:false}</prop>
+				</props>
+			</property>
+		</bean>
+		<bean id="hibernateInfo"
+			class="com.asjngroup.deft.common.database.hibernate.util.HibernateInfo"
+			scope="singleton">
+			<constructor-arg index="0" ref="sessionFactory" />
+			<constructor-arg index="1" ref="dataSource" />
+			<constructor-arg index="2" ref="idGenerator" />
+		</bean>
+
+		<bean
+			class="com.asjngroup.deft.common.database.hibernate.util.HibernateSession"
+			factory-method="initialise">
+			<constructor-arg ref="hibernateInfo" index="0" />
+		</bean>
+		
+		<bean id="transactionManager"
+			class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+			<property name="sessionFactory" ref="sessionFactory" />
+		</bean>
+
+		<bean id="persistenceExceptionTranslationPostProcessor"
+			class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
+
+		<bean id="idGenerator"
+			class="com.asjngroup.deft.common.database.helper.MysqlIdGenerator" />
+
+		
+	</beans>
+</beans>

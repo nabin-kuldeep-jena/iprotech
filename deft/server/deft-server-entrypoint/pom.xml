@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.asjngroup.deft</groupId>
+		<artifactId>deft-server</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+	<artifactId>deft-server-entrypoint</artifactId>
+	<packaging>jar</packaging>
+	<name>deft-server-entrypoint</name>
+	<description>Entrypoint for the project</description>
+	<properties>
+		<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+	</properties>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	<dependencies>
+<!-- 		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+			<version>${springboot.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<version>${springboot.version}</version>
+			<scope>test</scope>
+		</dependency> -->
+		<!-- Deft Dependency -->
+		<dependency>
+			<groupId>com.asjngroup.deft</groupId>
+			<artifactId>deft-server-common</artifactId>
+			<version>${deft.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.asjngroup.deft</groupId>
+			<artifactId>deft-server-framework</artifactId>
+			<version>${deft.version}</version>
+		</dependency>
+	</dependencies>
+</project>

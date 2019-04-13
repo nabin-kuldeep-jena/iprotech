@@ -1,0 +1,27 @@
+<ComponentsRoot>
+  <ComponentTypes>
+			<ComponentType cptTypeCd="PropertyType" cptName="Property Type" ptnName="System">
+			<Components>
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ComponentPropertyType" pdgKey="" cmpName="Component Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.DatePropertyType" pdgKey="" cmpName="Date Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.DecimalPropertyType" pdgKey="" cmpName="Decimal Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.BooleanPropertyType" pdgKey="" cmpName="Flag Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.HardLookupPropertyType" pdgKey="" cmpName="Hard Lookup Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.CustomHardLookupPropertyType" pdgKey="" cmpName="Custom Hard Lookup Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.IntegerPropertyType" pdgKey="" cmpName="Integer Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.LongPropertyType" pdgKey="" cmpName="Long Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.LookupPropertyType" pdgKey="" cmpName="Lookup Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.LookbackPropertyType" pdgKey="" cmpName="Lookback Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ParameterDfnPropertyType" pdgKey="" cmpName="ParameterDfn Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.PasswordPropertyType" pdgKey="" cmpName="Password Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.StringPropertyType" pdgKey="" cmpName="String Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ContextFilePropertyType" pdgKey="" cmpName="Context File Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ContextDirectoryPropertyType" pdgKey="" cmpName="Context Directory Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ColourPropertyType" pdgKey="" cmpName="Colour Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.SelectionChoicePropertyType" pdgKey="" cmpName="Selection Choice Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.SQLLookupPropertyType" pdgKey="" cmpName="SQL Lookup Property" ptnName="System" />
+				<Component cmpNewWindow="N" cmpClientComponent="1" cmpServerComponent="com.asjngroup.deft.common.properties.ChartPropertyType" pdgKey="" cmpName="Chart Property" ptnName="System" />
+			</Components>
+		</ComponentType>
+	</ComponentTypes>
+</ComponentsRoot>

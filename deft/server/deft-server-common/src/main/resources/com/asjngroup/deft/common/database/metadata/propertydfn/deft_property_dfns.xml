@@ -1,0 +1,40 @@
+<PropertyDfnGroupRoot clientNamespace="com.asjngroup.deft.common.properties.propertygroups" serverNamespace="com.asjngroup.deft.common.properties.propertygroups">
+ <PropertyDfnGroups>
+	<PropertyDfnGroup pdgSystemServerPackage="com.asjngroup.deft.common.properties.propertygroups" pdgKey="SystemProperties" pdgName="System Properties" pdgParentPdgKey="" >
+	      <PropertyDfns>
+			<PropertyDfn prdRenderFl="Y" cmpName="Lookup Property" cptTypeCd="PropertyType" prdKey="SysCommonPartition" prdName="Common Partition" prdDefault="Common" prdReadOnlyFl="Y" prdMandatoryFl="Y" prdExtra1="PartitionTbl" prdExtra2="ptnName" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	        <PropertyDfn prdRenderFl="N" cmpName="String Property" cptTypeCd="PropertyType" prdKey="SysLicenseKey" prdName="License Key" prdDefault="[None]" prdReadOnlyFl="Y" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	        <PropertyDfn prdRenderFl="Y" cmpName="Integer Property" cptTypeCd="PropertyType" prdKey="SysLicenseKeyWarningInterval" prdName="License Key Warning Interval (days)" prdDefault="5" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="1" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	        <PropertyDfn prdRenderFl="Y" cmpName="Integer Property" cptTypeCd="PropertyType" prdKey="SysSystemDp" prdName="System Decimal Places" prdDefault="6" prdReadOnlyFl="Y" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	        <PropertyDfn prdRenderFl="Y" cmpName="String Property" cptTypeCd="PropertyType" prdKey="SysValidDigits" prdName="Valid Digits" prdDefault="0123456789" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+			<PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="SysLoginInformation" prdName="Display Login Information" prdDefault="N" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	        <PropertyDfn prdRenderFl="N" cmpName="String Property" cptTypeCd="PropertyType" prdKey="SysLicenseInstalledDttm" prdName="License Installed Dttm" prdDefault="" prdReadOnlyFl="Y" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+			<PropertyDfn prdRenderFl="Y" cmpName="String Property" cptTypeCd="PropertyType" prdKey="SysSupportEmailIds" prdName="Support Email Ids" prdDefault="" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+			<PropertyDfn prdRenderFl="Y" cmpName="Integer Property" cptTypeCd="PropertyType" prdKey="SysPaginationMaxRowCount" prdName="Pagination Max Buffer Rows" prdDefault="10000" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+			<PropertyDfn prdRenderFl="Y" cmpName="Integer Property" cptTypeCd="PropertyType" prdKey="SysPaginationBufferSize" prdName="Pagination Buffer Pre Fetch Percentage" prdDefault="20" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		    <PropertyDfn prdRenderFl="Y" cmpName="Integer Property" cptTypeCd="PropertyType" prdKey="SysPaginationTimeout" prdName="Pagination Timeout(seconds)" prdDefault="900" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	   		<PropertyDfn prdRenderFl="Y" cmpName="String Property" cptTypeCd="PropertyType" prdKey="SysTablespaceForTempTbls" prdName="Tablespace Name for Temporary Tables" prdDefault="" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	</PropertyDfns>
+  </PropertyDfnGroup>
+  <PropertyDfnGroup  pdgSystemServerPackage="com.asjngroup.deft.common.properties.propertygroups" pdgKey="RoleProperties" pdgName="Role Properties" pdgParentPdgKey="">
+      <PropertyDfns>
+		<PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="RolAdministratorRole" prdName="Administrator Role" prdDefault="N" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+        <PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="RolEditAdminRoleProperties" prdName="Edit Administrator Role Properties" prdDefault="N" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+        <PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="RolEditAdminUserProperties" prdName="Edit Administrator User Properties" prdDefault="N" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+     </PropertyDfns>
+   </PropertyDfnGroup>
+   <PropertyDfnGroup pdgSystemServerPackage="com.asjngroup.deft.common.properties.propertygroups" pdgKey="UserProperties" pdgName="User Properties" pdgParentPdgKey="">
+      <PropertyDfns>
+        <PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="UsrAllowMultipleLogins" prdName="Allow Multiple Logins" prdDefault="Y" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="N" cmpName="Hard Lookup Property" cptTypeCd="PropertyType" prdKey="UsrCalendarLocale" prdName="Calendar" prdDefault="en-GB" prdReadOnlyFl="N" prdMandatoryFl="Y"  prdExtra1="en-GB;en-US;hi-SA" prdExtra2="English (GB);English (US);Islamic" prdExtra3="" prdExtra4="" prdExtra5="" />
+		<PropertyDfn prdRenderFl="Y" cmpName="Date Property" cptTypeCd="PropertyType" prdKey="UsrGlobalPivotDttm" prdName="Global Default Pivot Date" prdDefault="01-01-1900 00:00:00" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="N" cmpName="Hard Lookup Property" cptTypeCd="PropertyType" prdKey="UsrLocale" prdName="Locale" prdDefault="en-GB" prdReadOnlyFl="N" prdMandatoryFl="Y"  prdExtra1="ar-AR;de-DE;en-GB;en-US" prdExtra2="Arabic;Deutsch;English (GB);English (US)" prdExtra3="" prdExtra4="" prdExtra5="" />
+	    <PropertyDfn prdRenderFl="Y" cmpName="Lookup Property" cptTypeCd="PropertyType" prdKey="UsrPasswordValidation" prdName="Password Validation" prdDefault="Standard Password Validation" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="UserPasswordValidation" prdExtra2="upvName" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="N" cmpName="Hard Lookup Property" cptTypeCd="PropertyType" prdKey="UsrTheme" prdName="Themes" prdDefault="Marine" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="Aqua;Cobalt;Marine;Meadow;Mulberry;Winter" prdExtra2="aqua;cobalt;marine;meadow;mulberry;winter" prdExtra3="theme-aqua.png;theme-cobalt.png;theme-marine.png;theme-meadow.png;theme-mulberry.png;theme-winter.png" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="Y" cmpName="Hard Lookup Property" cptTypeCd="PropertyType" prdKey="UsrDateFormat" prdName="User Date Format" prdDefault="MM/dd/yyyy" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="dd/MM/yyyy;MM/dd/yyyy;yyyy-MM-dd;yyyy/MM/dd" prdExtra2="dd/mm/yyyy;mm/dd/yyyy;yyyy-mm-dd;yyyy/mm/dd" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="Y" cmpName="Hard Lookup Property" cptTypeCd="PropertyType" prdKey="UsrTimeFormat" prdName="User Time Format" prdDefault="HH:mm:ss" prdReadOnlyFl="N" prdMandatoryFl="Y" prdExtra1="HH:mm:ss;hh:mm:ss a;hh:mm a" prdExtra2="HH:mm:ss;hh:mm:ss;hh:mm" prdExtra3="" prdExtra4="" prdExtra5=""/>
+		<PropertyDfn prdRenderFl="Y" cmpName="Flag Property" cptTypeCd="PropertyType" prdKey="UsrUseDefaultNumberFormat" prdName="Apply Number Format" prdDefault="Y" prdReadOnlyFl="N" prdMandatoryFl="N" prdExtra1="" prdExtra2="" prdExtra3="" prdExtra4="" prdExtra5=""/>
+	 </PropertyDfns>
+	</PropertyDfnGroup>
+ </PropertyDfnGroups>
+</PropertyDfnGroupRoot>
